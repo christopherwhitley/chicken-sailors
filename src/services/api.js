@@ -89,11 +89,11 @@ const testimonials = [
   },
 ]
 
-export const fetchTestimonials = () => {
+export const fetchTestimonials = async () => {
   // TODO: When ready to simulate API flakiness, uncomment the line below, and
   // make this method async.
 
-  // await addApiFlakiness()
+  await addApiFlakiness()
 
   const shuffled = [...testimonials].sort(() => 0.5 - Math.random());
 
@@ -148,11 +148,11 @@ const pricingPlans = [
   },
 ]
 
-export const fetchPricingPlans = () => {
+export const fetchPricingPlans = async () => {
   // TODO: When ready to simulate API flakiness, uncomment the line below, and
   // make this method async.
 
-  // await addApiFlakiness()
+  await addApiFlakiness()
 
   return [...pricingPlans]
 }

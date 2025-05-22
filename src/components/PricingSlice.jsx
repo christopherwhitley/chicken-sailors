@@ -1,9 +1,19 @@
 import { fetchPricingPlans } from "../services/api"
 import PricingCard from "./PricingCard"
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button"
+import { fetchWithRetry } from "../utils/FetchWithRetry";
 
 const PricingSlice = () => {
-  const pricingPlans = fetchPricingPlans()
+    const [pricingPlans, setPricingPlans] = useState([]);
+  
+    useEffect(() => {
+      fetchWithRetry(() => fetchPricingPlans())
+        .then(setPricingPlans)
+        .catch((err) => {
+          console.error("Failed to fetch pricing plans:", err);
+        });
+    }, []);
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
