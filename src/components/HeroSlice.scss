@@ -1,5 +1,158 @@
 // This style file is for the HeroSlice component
 
 .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 3rem;
   color: black;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-weight: bold;
+  margin: 0 8rem;
+  font-size: 22px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+
+.eggs {
+  margin: 2rem 0;
+  font-size: 18px;
+}
+
+.eggs #text {
+  font-size: 22px;
+}
+
+.eggs svg {
+  float: left;
+}
+
+.hero-image {
+  margin-left: 2rem;
+  margin-right: 10rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-button {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-button button {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 639px) {
+  .hero {
+    display: block;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  .hero-content {
+    margin: 0 2rem;
+    font-size: 14px;
+  }
+  .hero-content h1 {
+    font-size: 22px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .hero-image {
+    max-width: 100%;
+    margin: 0;
+  }
+  .eggs {
+    margin-bottom: 0;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-button {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero {
+    display: block;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  .hero-content {
+    margin: 0;
+  }
+  .eggs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-content h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero-image {
+    margin: 1rem 0 0 0;
+  }
+  .hero-button {
+    align-self: center;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .hero {
+    display: block;
+    max-width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0;
+  }
+
+  .eggs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+  }
+
+  .hero-button {
+    align-self: center;
+    margin-top: 0;
+    justify-content: center;
+  }
 }
