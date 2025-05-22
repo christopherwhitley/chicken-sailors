@@ -1,3 +1,11 @@
+## Testing
+
+Using **Vitest** as the test runner and **React Testing Library** for testing React components.
+
+### Dev Dependencies
+
+npm install --save-dev vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event
+
 # RPF software engineer: technical challenge
 
 ![A cartoon of a chicken sailing in a dinghy](./public/chicken-dinghy-6.jpg)
